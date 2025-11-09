@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VideoLab - Всё для видеомонтажа</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <a href="index.html" class="logo">VideoLab</a>
+                    <div class="tagline">Всё для профессионального видеомонтажа</div>
+                </div>
+                <div class="header-controls">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                    <a href="https://t.me/VideoLaboratory_Bot" target="_blank" class="suggest-btn" id="suggestBtn">💡 Написать в TG</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <main id="mainContent">
+            <!-- Главная страница -->
+            <section id="homePage" class="page active">
+                <section class="search-section">
+                    <h1 class="search-title">Найдите идеальный контент</h1>
+                    <p class="search-subtitle">Библиотека с тысячами профессиональных видео, звуковых эффектов, музыки и ресурсов для монтажа</p>
+                    
+                    <div class="search-container">
+                        <input type="text" class="search-input" id="mainSearch" placeholder="Поиск по названию, описанию, тегам...">
+                        <button class="search-btn" id="searchBtn">
+                            <span>🔍</span>
+                        </button>
+                    </div>
+                </section>
+
+                <nav class="main-nav">
+                    <div class="categories-grid">
+                        <a href="#" class="category-card" data-category="video">
+                            <div class="category-icon">🎬</div>
+                            <h3>Видео</h3>
+                            <p>Фоны, футажи, переходы, эффекты</p>
+                        </a>
+                        <a href="#" class="category-card" data-category="audio">
+                            <div class="category-icon">🎵</div>
+                            <h3>Аудио</h3>
+                            <p>Музыка, звуковые эффекты</p>
+                        </a>
+                        <a href="#" class="category-card" data-category="images">
+                            <div class="category-icon">🖼️</div>
+                            <h3>Картинки</h3>
+                            <p>Фоны, стикеры, значки</p>
+                        </a>
+                        <a href="#" class="category-card" data-category="fonts">
+                            <div class="category-icon">🔤</div>
+                            <h3>Шрифты</h3>
+                            <p>С поддержкой русского и без</p>
+                        </a>
+                    </div>
+                </nav>
+            </section>
+
+            <!-- Страница категории -->
+            <section id="categoryPage" class="page">
+                <div class="page-header">
+                    <button class="back-btn" id="backBtn">← Назад</button>
+                    <h1 class="page-title" id="categoryTitle"></h1>
+                </div>
+
+                <div class="filters-section">
+                    <div class="search-box">
+                        <input type="text" class="search-input" id="categorySearch" placeholder="Поиск...">
+                        <span class="search-icon">🔍</span>
+                    </div>
+                    <div class="subcategory-filters" id="subcategoryFilters"></div>
+                </div>
+
+                <div class="results-grid" id="resultsGrid"></div>
+                <div class="no-results" id="noResults" style="display: none;">
+                    <p>Ничего не найдено</p>
+                </div>
+                <div class="load-more-container" id="loadMoreContainer" style="display: none;">
+                    <button class="btn btn-primary btn-large" id="loadMoreBtn">Загрузить ещё</button>
+                </div>
+                <div class="end-message" id="endMessage" style="display: none;">
+                    <p>Вы дошли до конца</p>
+                </div>
+            </section>
+
+            <!-- Страница детального просмотра -->
+            <section id="detailPage" class="page">
+                <button class="back-btn" id="detailBackBtn">← Назад</button>
+                <div id="detailContent"></div>
+            </section>
+
+            <!-- Страница результатов поиска -->
+            <section id="searchPage" class="page">
+                <div class="page-header">
+                    <button class="back-btn" id="searchBackBtn">← Назад</button>
+                    <h1 class="page-title">Результаты поиска: <span id="searchQuery"></span></h1>
+                </div>
+                <div class="results-grid" id="searchResults"></div>
+                <div class="no-results" id="searchNoResults" style="display: none;">
+                    <p>По запросу "<span id="searchQueryText"></span>" ничего не найдено</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2025 VideoLab <span class="footer-heart">•</span> Сделано с заботой о контенте</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Скрипты -->
+    <script src="data/video.js"></script>
+    <script src="data/audio.js"></script>
+    <script src="data/images.js"></script>
+    <script src="data/fonts.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
