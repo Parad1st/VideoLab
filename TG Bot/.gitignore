@@ -1,0 +1,5 @@
+state.json
+*.pyc
+__pycache__/
+*.log
+
